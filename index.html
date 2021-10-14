@@ -43,7 +43,7 @@
     <section>
         <div class="hero ">
             <div class="hero-container container"><h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button class="hero-btn" data-modal-open type="button">Заказать услугу</button>
+        <button class=" btn hero-btn" data-modal-open type="button">Заказать услугу</button>
             </div>
     </div>
     </section>
@@ -345,7 +345,7 @@
                 <p class="subscribe">Подпишитесь на рассылку</p>
                 <form class="subscribe-form" name="subscribe-form" autocomplete="on" novalidate>
                     <input class="subscribe-field" type="email" name="email" placeholder="E-mail"/>
-                    <button class="subscribe-btn" type="submit">Подписаться<svg class="icon-send-subscribe"><use href="./images/sprite.svg#icon-send"></use></svg> </button>    
+                    <button class=" btn subscribe-btn" type="submit">Подписаться<svg class="icon-send-subscribe"><use href="./images/sprite.svg#icon-send"></use></svg> </button>    
                 </form>
             </div>
             </div>
@@ -357,14 +357,37 @@
   <div class="modal">
     <button type="button" class="close-btn" data-modal-close><svg class="close-svg"><use href="./images/sprite.svg#icon-close"></use></svg>  </button>  
     <p class="title-modal">Оставьте свои данные, мы вам перезвоним</p>
-    <form>
-        <label for="user_email">Email</label>
-        <input type="email" name="email" id="user_email" />
-    
-        <label for="user_password">Password</label>
-        <input type="password" name="password" id="user_password" />
-    
-        <button type="submit">Submit</button>
+    <form action-"#" class="modal-form">
+        <div class="modal-field">
+            <label for="user-name" class="label-input">Имя</label>
+            <span class="input-wrapper">
+                <input type="text" name="user-name" id="user-name" class="modal-input" />
+            <svg class="input-icon"><use href="./images/sprite.svg#icon-person-black"></use></svg>
+            </span>
+        </div>
+        <div class="modal-field">
+            <label for="user-tel" class="label-input">Телефон</label>
+            <span class="input-wrapper">
+            <input type="tel" name="user-tel" id="user-tel" class="modal-input" />
+            <svg class="input-icon">
+            <use href="./images/sprite.svg#icon-phone-black"></use>
+            </svg>
+        </span>
+        </div>
+        <div class="modal-field">
+            <label for="user-email" class="label-input">Почта</label>
+            <span class="input-wrapper">
+            <input type="email" name="user-email" id="user-email" class="modal-input" />
+            <svg class="input-icon">
+            <use href="./images/sprite.svg#icon-email-black"></use>
+            </svg>
+        </span>
+        </div>
+        <div class="modal-field">
+            <label for="user-comment" class="label-input">Комментарий</label>
+            <textarea name="user-comment" id="user-comment" class="modal-comment" placeholder="Введите текст"></textarea>
+        </div>
+        <button type="submit" class=" btn modal-btn">Отправить</button>
     </form>
 </div>   
  </div>
