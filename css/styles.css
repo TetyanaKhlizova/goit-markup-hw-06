@@ -817,6 +817,7 @@ img {
   background-color: transparent;
   padding-left: 42px;
   padding-right: 20px;
+  transition: border-color var(--trans-duration) var(--transit-tim-function);
 }
 .modal-input:focus,
 .modal-comment:focus {
@@ -853,6 +854,7 @@ img {
   border-radius: 4px;
   resize: none;
   padding: 12px 16px;
+  transition: border-color var(--trans-duration) var(--transit-tim-function);
 }
 .input-icon {
   width: 18px;
@@ -867,7 +869,7 @@ img {
   line-height: 1.71;
   color: var(--secondary-color);
   display: flex;
-
+  align-items: center;
   margin-bottom: 30px;
 }
 .check-text span {
@@ -880,13 +882,19 @@ img {
   align-items: center;
   justify-content: center;
 }
+.check-link {
+  font-style: normal;
+  color: var(--accent-color);
+}
 .icon-check {
-  width: 11px;
-  height: 8px;
+  width: 16px;
+  height: 15px;
 }
 .modal-check:checked + .check-text span {
   background-color: var(--accent-color);
+  fill: var(--title-color);
   border: none;
+  transition: background-color var(--trans-duration) var(--transit-tim-function);
 }
 .modal-btn {
   display: block;
