@@ -194,7 +194,8 @@ body {
 /* transitions for btn-hover*/
 
 .hero-btn,
-.btn-active {
+.btn-active,
+.subscribe-btn {
   transition: color var(--trans-duration) var(--transit-tim-function),
     background-color var(--trans-duration) var(--transit-tim-function),
     box-shadow var(--trans-duration) var(--transit-tim-function);
@@ -607,7 +608,10 @@ img {
 .subscribe-field:focus {
   border-color: var(--accent-color);
 }
-
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--btn-color);
+}
 /*.subscribe-field::placeholder {
   font-size: 16px;
   line-height: 1.25px;
@@ -741,6 +745,7 @@ img {
 }
 
 /* modal window*/
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -808,9 +813,17 @@ img {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
   background-color: transparent;
   padding-left: 42px;
   padding-right: 20px;
+}
+.modal-input:focus,
+.modal-comment:focus {
+  border-color: var(--accent-color);
+}
+.modal-input:focus + .input-icon {
+  fill: var(--accent-color);
 }
 .label-input {
   font-size: 12px;
@@ -824,6 +837,9 @@ img {
 .modal-field {
   margin-bottom: 10px;
 }
+.modal-user-field {
+  margin-bottom: 20px;
+}
 .input-wrapper {
   display: block;
   position: relative;
@@ -832,6 +848,7 @@ img {
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
   background-color: transparent;
   border-radius: 4px;
   resize: none;
@@ -844,6 +861,32 @@ img {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
+}
+.check-text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--secondary-color);
+  display: flex;
+
+  margin-bottom: 30px;
+}
+.check-text span {
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--primary-color);
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-check {
+  width: 11px;
+  height: 8px;
+}
+.modal-check:checked + .check-text span {
+  background-color: var(--accent-color);
+  border: none;
 }
 .modal-btn {
   display: block;
