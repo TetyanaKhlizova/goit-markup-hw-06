@@ -819,6 +819,22 @@ img {
   padding-right: 20px;
   transition: border-color var(--trans-duration) var(--transit-tim-function);
 }
+.modal-comment,
+.label-input,
+.modal-input {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--secondary-color);
+}
+
+.modal-comment::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
 .modal-input:focus,
 .modal-comment:focus {
   border-color: var(--accent-color);
@@ -827,10 +843,6 @@ img {
   fill: var(--accent-color);
 }
 .label-input {
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: var(--secondary-color);
   margin-bottom: 4px;
   display: block;
   outline: none;
