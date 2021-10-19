@@ -890,6 +890,7 @@ img {
   align-items: center;
   margin-bottom: 30px;
 }
+
 .icon-check-wrapper {
   width: 16px;
   height: 15px;
@@ -905,20 +906,23 @@ img {
   font-style: normal;
   color: var(--accent-color);
 }
-.icon-check {
-  width: 16px;
-  height: 15px;
-}
-.icon-check-wrapper:hover,
-.modal-check:focus + .check-text span {
-  background-color: var(--accent-color);
-  border: transparent;
-}
+
 .modal-check:checked + .check-text span {
-  background-color: var(--accent-color);
-  fill: var(--title-color);
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15px;
+  max-width: 16px;
+  background-image: url(../images/icon-check.jpg);
+  border: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   transition: background-color var(--trans-duration) var(--transit-tim-function);
+}
+.modal-check:hover + .check-text span,
+.modal-check:focus + .check-text span {
+  border-color: var(--accent-color);
 }
 .modal-btn {
   display: block;
@@ -932,3 +936,6 @@ img {
   background-color: var(--btn-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+/*<svg class="icon-check">
+                <use href="./images/sprite.svg#icon-vector2"></use>
+            </svg>*/
